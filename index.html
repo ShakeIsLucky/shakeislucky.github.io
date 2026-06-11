@@ -9,6 +9,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ShakeIsLucky/shake-design-system@main/systems/neo-tactile/css/shake-v2.css" />
 <style>
+  /* type: Departure Mono everywhere — pixel terminal, single weight */
+  @font-face{
+    font-family:'Departure Mono';
+    src:url('assets/fonts/DepartureMono-Regular.woff2') format('woff2');
+    font-weight:400;font-style:normal;font-display:swap;
+  }
+  :root{
+    --font-display:'Departure Mono',ui-monospace,monospace;
+    --font-sans:'Departure Mono',ui-monospace,monospace;
+    --font-code:'Departure Mono',ui-monospace,monospace;
+  }
+  h1,h2,h3,h4,strong,b{font-weight:400;}
+  em{font-style:normal;}
+  .hero h1{font-size:clamp(30px,4.6vw,52px);text-transform:uppercase;letter-spacing:.01em;line-height:1.18;}
+  h2{font-size:clamp(20px,2.6vw,30px);text-transform:uppercase;letter-spacing:.01em;}
+  h3{text-transform:uppercase;}
+  .topbar nav a,.wordmark,.foot-brand{text-transform:uppercase;letter-spacing:.06em;}
+  /* de-slop: no glossy pills — square, flat, bracketed */
+  .btn{border-radius:6px;background-image:none;text-transform:uppercase;letter-spacing:.06em;}
+  .btn.btn-action::before{content:"[ ";}
+  .btn.btn-action::after{content:" ]";}
+  .btn.bare::before{content:"[ ";}
+  .btn.bare::after{content:" ]";}
+  .eyebrow,.kicker,.chip,.hangtag{letter-spacing:.1em;}
+
   /* page-local: photo plates, X profile card, brand plate — tokens + presets only */
   .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-5);margin-top:var(--space-6);}
   .work-grid.detail{grid-template-columns:repeat(3,1fr);}
@@ -131,7 +156,7 @@
           </svg>
         </div>
         <div class="mark-spokes"><span>twill</span><span>·</span><span>denim</span><span>·</span><span>leather</span></div>
-        <span class="btn bare">ondastudios.com →</span>
+        <span class="btn bare">ondastudios.com</span>
       </a>
     </div>
   </section>
@@ -148,13 +173,13 @@
           <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg></div>
           <h3>headless-ads-manager</h3>
           <p>Hacked my way around the Meta Ads SDK so I don't have to look at their horrific dino UI.</p>
-          <a class="btn bare" href="https://github.com/ShakeIsLucky/headless-ads-manager">View on GitHub →</a>
+          <a class="btn bare" href="https://github.com/ShakeIsLucky/headless-ads-manager">View on GitHub</a>
         </div>
         <div class="card">
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg></div>
           <h3>Post Fiat validators</h3>
           <p>Validator nodes running on the Post Fiat ledger.</p>
-          <a class="btn bare" href="/.well-known/pft-ledger.toml">View domain proof →</a>
+          <a class="btn bare" href="/.well-known/pft-ledger.toml">View domain proof</a>
           <span class="proof-key">nHDEUdawsDpQYxKNohxTaHBVnfdnjSwsPGX5vtRN7m62NvEuxJYF</span>
         </div>
       </div>
