@@ -33,6 +33,11 @@
   .btn.bare::before{content:"[ ";}
   .btn.bare::after{content:" ]";}
   .eyebrow,.kicker,.chip,.hangtag{letter-spacing:.1em;}
+  /* accent: felt sage — no orange, ever */
+  :root{--action:#3f6b52;--action-deep:#2f5240;--grad-action:linear-gradient(180deg,#3f6b52,#2f5240);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme]){--action:#8fae8b;--action-deep:#6e8f6a;--grad-action:linear-gradient(180deg,#8fae8b,#6e8f6a);}}
+  :root[data-theme="dark"]{--action:#8fae8b;--action-deep:#6e8f6a;--grad-action:linear-gradient(180deg,#8fae8b,#6e8f6a);}
+  .btn.btn-action{background:none;box-shadow:var(--emboss-sm);text-shadow:none;color:var(--action);}
 
   /* page-local: photo plates, X profile card, brand plate — tokens + presets only */
   .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-5);margin-top:var(--space-6);}
